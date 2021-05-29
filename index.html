@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <link rel="stylesheet"
+        href="stylle.css">
+        <script src="scrippt.js"></script>
+    </head>
+    <body>
+    <canvas id="canvas"></canvas>
+    <!--Reset button ^_^ -->
+    <div id="btn123" onclick="Reset()">Reset</div>
+    <!--Ufo-->
+        <div class="ufo" id="ufo">
+            <div class="top">
+                <div></div>
+            </div>
+            <div class="top2"></div>
+            <div class="mid2">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+      <!-- controls ^_^ -->
+      <div class="controls">
+    <div></div>
+    <div class="cont">
+        <div class="con1"><input id="c" type="range" min="-5" max="5" value="0" oninput="fun()" ontouchend="Can()" onmouseup="Can()"></div>
+        <div class="con2"><input id="c2" type="range" min="-5" max="5" value="0" oninput="fun2()" ontouchend="Can2()" onmouseup="Can2()"></div>
+    </div>
+    </div>
+        <script>
+        var a = [];
+        var cnv = document.getElementById("canvas");
+        var ctx = cnv.getContext("2d");
+        var h = window.innerHeight;
+        var w = window.innerWidth;
+        cnv.height = h;
+        cnv.width = w;
+        function component(radius,close,color,math,x,y){
+            this.radius = radius;
+            this.close = close;
+            this.color= color;
+            this.math = math;
+            this.x = x;
+            this.y = y;
+            this.update = function(){
+                ctx.fillStyle = this.color;
+                ctx.fill();
+ ctx.beginPath();
+                ctx.arc(this.x,this.y,this.radius,this.close,this.math);
+ctx.stroke();
+            }
+            this.update();
+        }
+        for(i=0;i<100;i++){
+           a.push(new component(1.3,0,"#fff",2*Math.PI,Math.random()*w,Math.random()*h)) 
+        }
+        var ram = ["#f5f5f5","grey","#f5f5f5","#dadada"]
+        function hi(){
+        ctx.clearRect(0,0,h,w)
+            for(i=0;i<a.length;i++){
+                a[i].color=ram[Math.floor(Math.random()*4)];
+                a[i].update();
+            }
+        }
+        setInterval(hi,200)
+    </script>
+    </body>
+</html>
