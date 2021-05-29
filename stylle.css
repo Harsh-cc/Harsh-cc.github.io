@@ -1,0 +1,185 @@
+body {
+    background-color:#000;
+    
+}
+#canvas{
+    background-color:#000;
+    position:fixed;
+}
+#ufo{
+    height:200px;
+    width:200px;
+    position:fixed;
+}
+.top{
+    height:40px;
+    width:100px;
+    background-color:skyblue;
+    border-radius:40px 40px 0 0;
+    margin-left:50px;
+    z-index:200;
+    position:absolute;
+    top:4px;
+}
+.top div{
+position:relative;
+    height:30px;
+    width:20px;
+    background-color:#fff;
+    margin-left:65px;
+    transform:rotateZ(320deg);
+    margin-top:4px;
+    border-radius:100%;
+}
+.top div::before{
+position:absolute;
+content:"";
+    height:30px;
+    width:12px;
+    border-radius:100%;
+    background-color:skyblue;
+}
+.top2{
+    margin-top:-10px;
+    height:20px;
+    width:100px;
+    background-color:skyblue;
+    border-radius:0 0 100% 100%;
+    margin-left:50px;
+    z-index:30;
+    position:absolute;
+    top:44px;
+}
+.mid2{
+    height:50px;
+    width:200px;
+    background-color:#454545;
+    border-radius:100% 100% 100% 100%;
+    margin-top:0px;
+    border-top:15px solid grey;
+    z-index:20;
+    position:absolute;
+    top:30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.mid2 div:nth-child(1){
+    height:20px;
+    width:20px;
+    border-radius:100%;
+    background-color:red;
+    display:inline-block;
+    margin-right:10px;
+    margin-top:-15px;
+    animation:lights 2s linear infinite;
+}
+#btn123{
+  height:40px;  
+  width:80px;
+  background-color:grey;
+  font-size:larger;
+  font-weight:bolder;
+  position:absolute;
+  top:0;
+  right:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
+  z-index:100;
+  border-radius:10px;
+}
+.mid2 div:nth-child(2){
+    height:20px;
+    width:20px;
+    border-radius:100%;
+    background-color:red;
+    display:inline-block;
+    margin-left:20px;
+    margin-top:10px;
+    animation:lights 2s linear infinite;
+}
+.mid2 div:nth-child(3){
+    height:20px;
+    width:20px;
+    border-radius:100%;
+    background-color:red;
+    display:inline-block;
+    margin-left:30px;
+    margin-bottom:-10px;
+    animation:lights 2s linear infinite;
+}
+.mid2 div:nth-child(4){
+    height:20px;
+    width:20px;
+    border-radius:100%;
+    background-color:red;
+    display:inline-block;
+    margin-top:-20px;
+    margin-left:20px;
+    animation:lights 2s linear infinite;
+}
+@keyframes lights{
+    0%{
+        background-color:red;
+    }
+    20%{
+        background-color:blue;
+    }
+    40%{
+        background-color:orange;
+    }
+    60%{
+        background-color:purple;
+    }
+    80%{
+        background-color:magenta;
+    }
+}
+/* controls hi hi*/
+.controls{
+    height:200px;
+    width:400px;
+    position:fixed;
+}
+#c{
+    margin-top:40%;
+    margin-left:0%;
+}
+.con1{
+height:130px;
+width:130px;
+border-radius:100%;
+background-color:grey;
+display:inline-block;
+border:solid 10px #454545;
+}
+.con2{
+    height:130px;
+width:130px;
+border-radius:100%;
+background-color:grey;
+display:inline-block;
+margin-left:60px;
+border:solid 10px #454545;
+}
+#c2{
+    margin-top:46%;
+    margin-left:2%;
+    transform:rotateZ(90deg);
+}
+input{
+    color:#000;
+}
+.cont{
+    width:100%;
+    position:fixed;
+    left:0;
+    bottom:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+/*from css-tricks*/
+input[type=range] { -webkit-appearance: none; margin: 18px 0; width: 100%; } input[type=range]:focus { outline: none; } input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 8.4px; cursor: pointer; box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; background: #f5f5f5; border-radius: 1.3px; border: 0.2px solid #010101; } input[type=range]::-webkit-slider-thumb { box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; border: 1px solid #000000; height: 36px; width: 16px; border-radius: 3px; background: #ffffff; cursor: pointer; -webkit-appearance: none; margin-top: -14px; } input[type=range]:focus::-webkit-slider-runnable-track { background: #367ebd;
